@@ -13442,6 +13442,11 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8 {
   opacity: .35;
 }
 
+.member-img .pseudo:hover:checked + .pick {
+  display: block;
+  z-index: 6;
+}
+
 .member-img .pick {
   position: absolute;
   content: '';
@@ -13450,6 +13455,12 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8 {
   bottom: 50%;
   top: 30%;
   z-index: 10;
+  display: none;
+}
+
+#head:checked + .pick {
+  display: block;
+  z-index: 6;
 }
 
 .title-step {
