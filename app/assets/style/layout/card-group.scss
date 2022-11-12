@@ -47,6 +47,10 @@
         &:hover{
         cursor: pointer;
         opacity: .35;
+        &:checked+.pick{
+           display: block;
+           z-index: 6;
+        }
         }
        
     }
@@ -58,7 +62,13 @@
         bottom: 50%;
         top: 30%;
         z-index: 10;
-        }
+        display: none;
+    }   
+}
+
+#head:checked+.pick{
+    display: block;
+    z-index: 6;
 }
 
 .title-step{
