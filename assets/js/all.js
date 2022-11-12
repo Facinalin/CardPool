@@ -32,8 +32,8 @@ const positionElement = (e) =>{
 
 window.addEventListener('mousemove', positionElement);*/
 
-var head = document.querySelector('#head');
+var head = document.querySelector('.member-row');
 head.addEventListener('clcik', function (e) {
-  console.log('你點到了');
+  console.log(e.target.nodeName);
 });
 //# sourceMappingURL=all.js.map
