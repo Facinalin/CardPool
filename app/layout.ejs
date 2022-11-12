@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/style/all.css">
+    <script src="https://kit.fontawesome.com/19d4d169f9.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar-font navbar navbar-expand-lg navbar-light bg-white container">
+      <div class="container-fluid justify-content-between">
+          <div>
+        <a class="logo navbar-brand" href="#"><img class="logo-sz" src="/assets/images/big-logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-maingray" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                代購
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-maingray" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                轉販
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-maingray" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                飯製
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-maingray" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                活動
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <h1 class="info"><i class="fa-solid fa-cart-shopping icon-width-lg text-maingray"></i></h1>
+              </button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog me-0">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">購物車</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      MAXIDENT專輯一件
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">回到商品頁</button>
+                      <button type="button" class="btn btn-primary">結帳</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li calss="nav-item">
+              <a href="" class="nav-link">
+                <i class="fa-regular fa-user icon-width-lg text-maingray"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="gradient-bar barheight-sm"></div>
+
+    <%- contents %>
+
+    <footer class="footer">
+      <div class="barheight-xs bg-primary"></div>
+      <nav class="navbar-font navbar navbar-expand-lg navbar-light bg-white container">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li calss="nav-item">
+                <a href="" class="nav-link fs-8">
+                  隱私政策
+                </a>
+              </li>
+              <li calss="nav-item">
+                <a href="" class="nav-link fs-8">
+                  退換貨政策
+                </a>
+              </li>
+              <li calss="nav-item">
+                <a href="" class="nav-link fs-8">
+                  服務條款
+                </a>
+              </li>
+              <li calss="nav-item">
+                <a href="" class="nav-link fs-8">
+                  FAQ
+                </a>
+              </li>
+              <li calss="nav-item">
+                <a href="" class="nav-link fs-8">
+                  聯絡我們
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="gradient-bar barheight-lg d-flex justify-content-center align-items-center">
+        <h6 class="fs-6 text-white">2022 CardPool All Rights Reserved.</h6>
+      </div>
+    </footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

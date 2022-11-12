@@ -1,0 +1,40 @@
+.logo-sz{
+   display: block;
+   width: 100%;
+}
+
+.logo{
+    display: block;
+    width: 126px;
+    height: 90px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.icon-width-lg{
+   font-size: 26px;
+}
+
+.navbar-font{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 500;
+}
+
+.gradient-bar{
+    background-image: linear-gradient(to right, $primary, $secondary);
+}
+
+.barheight-xs{
+    height: 4px;
+    opacity: .5;
+}
+
+.barheight-sm{
+    height: 15px;
+}
+
+.barheight-lg{
+    height: 76px;
+}

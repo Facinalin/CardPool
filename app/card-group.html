@@ -1,0 +1,61 @@
+---
+title: Boostrap Index
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="card-group">
+    <!--步驟一-->
+    <div class="first-step container-fluid d-flex justify-content-center mb-60">
+        <div class="wrapper d-flex flex-wrap justify-content-center">
+     <h1 class="mb-4"><span class="fz-108 text-primary me-4">1</span>請選擇要排隊拆卡的成員：</h1>
+     <div class="member-area d-flex flex-wrap">
+        <div class="member-row d-flex justify-content-between mb-4">
+       
+      <label for="head">
+        <input type="checkbox" id="head">
+        <div class="member-img mb-2">
+            <img class="per-member" src="/assets/images/bangchan-head.png" alt="">
+            <i class="pick fa-solid fa-check fz-66"></i>
+            <div class="pseudo"></div>
+        </div>
+        <h2 class="text-maingray text-center fz-20">Bangchan</h2>
+      </label> 
+       <a><div class="member-img mb-2"><img class="per-member" src="/assets/images/leeknow-head.png" alt=""><div class="pseudo"></div></div><h3 class="text-maingray text-center fz-20">Leeknow</h3></a>
+       <a><div class="member-img mb-2"><img class="per-member" src="/assets/images/changbin-head.png" alt=""><div class="pseudo"></div></div><h3 class="text-maingray text-center fz-20">Changbin</h3></a>
+    </div>
+    <div class="member-row d-flex justify-content-between mb-4">
+        <a><div class="member-img mb-2"><img class="per-member" src="/assets/images/hyunjin-head.png" alt=""><div class="pseudo"></div></div><h2 class="text-maingray text-center fz-20">Hyunjin</h2></a>
+        <a><div class="member-img mb-2"><img class="per-member" src="/assets/images/han-head.png" alt=""><div class="pseudo"></div></div><h3 class="text-maingray text-center fz-20">Han</h3></a>
+        <a><div class="member-img mb-2"><img class="per-member" src="/assets/images/felix-head.png" alt=""><div class="pseudo"></div></div><h3 class="text-maingray text-center fz-20">Felix</h3></a>
+     </div>
+     <div class="member-row d-flex justify-content-between mb-4">
+        <a><div class="member-img mb-2"><img class="per-member" src="/assets/images/seungmin-head.png" alt=""><div class="pseudo"></div></div><h2 class="text-maingray text-center fz-20">Seungmin</h2></a>
+        <a><div class="member-img mb-2"><img class="per-member" src="/assets/images/in-head.png" alt=""><div class="pseudo"></div></div><h3 class="text-maingray text-center fz-20">I.N</h3></a>
+        <a><div class="member-img mb-2"><img class="per-member" src="/assets/images/all-head.png" alt=""><div class="pseudo"></div></div><h3 class="text-maingray text-center fz-20">All</h3></a>
+     </div>
+    </div>
+     </div>
+    </div>
+    <!--步驟二-->
+    <div class="second-step container-fluid d-flex justify-content-center mb-60">
+        <div class="wrapper d-flex flex-wrap justify-content-center">
+        <h1 class="mb-4 text-center title-step"><span class="fz-108 text-primary me-4">2</span>請選擇通路：</h1>
+
+    
+        <select class="slide border border-3 border-secondary py-3 rounded-xxl">
+            <option class="fz-28" disabled selected hidden>查看所有通路</option>
+            <option class="fz-28">所有通路</option>
+            <option class="fz-28">阿拉丁</option>
+            <option class="fz-28">Music Planet</option>
+            <option class="fz-28">JYP</option>
+            <option class="fz-28">YES24</option>
+            <option class="fz-28">KTown4U</option>
+            <option class="fz-28">WithMuu</option>
+            <option class="fz-28">SoundWave</option>
+        </select>
+    </div>
+</div>
+
+</div>
