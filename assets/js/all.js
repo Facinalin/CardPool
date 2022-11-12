@@ -1,22 +1,23 @@
+"use strict";
+
 ////////swiper deisgn
-const swiper = new Swiper('.swiper', {
-  slidesPerView:6,
-  slidesPerGroup:2,
+var swiper = new Swiper('.swiper', {
+  slidesPerView: 6,
+  slidesPerGroup: 2,
   grid: {
-    column: 3,
+    column: 3
   },
   autoplay: {
-    delay: 2500,
+    delay: 2500
   },
   loop: true,
   speed: 300,
-  spaceBetween: 50,
+  spaceBetween: 50
 });
-
 /*const swiper2 = document.querySelector('.swiper').swiper;
 swiper2.slideNext();*/
-
 ////////curosr deisgn
+
 /*const cursorSmall = document.querySelector('.small');
 const cursorBig = document.querySelector('.big');
 
@@ -31,8 +32,8 @@ const positionElement = (e) =>{
 
 window.addEventListener('mousemove', positionElement);*/
 
-const head = document.querySelector('#head');
-
-head.addEventListener('clcik',(e) =>{
-  console.log('你點到了')
-})
+var head = document.querySelector('#head');
+head.addEventListener('clcik', function (e) {
+  console.log('你點到了');
+});
+//# sourceMappingURL=all.js.map
