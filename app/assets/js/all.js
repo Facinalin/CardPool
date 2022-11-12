@@ -31,8 +31,8 @@ const positionElement = (e) =>{
 
 window.addEventListener('mousemove', positionElement);*/
 
-const head = document.querySelector('#head');
+const head = document.querySelector('.member-row');
 
 head.addEventListener('clcik',(e) =>{
-  console.log('你點到了')
+  console.log(e.target.nodeName);
 })
