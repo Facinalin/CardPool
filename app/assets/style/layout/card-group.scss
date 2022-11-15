@@ -25,15 +25,28 @@
     z-index: 2;
     position: relative;
 }
+
+.active{
+    border: 8px solid #9B9BE3;
+}
+
 .member-img{
     position: relative;
     border-radius: 50%;
     border: 8px solid #ffffff;
     &:hover{
-    border: 8px solid #1e1c1c;
+        border: 8px solid #1e1c1c;
     }
+
     .pseudo{
         position: absolute;
+        content: '';
+        transform: translateX(-50%) translateY(50%);
+        left: 0;
+        top: -50%;
+        z-index: 10;
+        display: none;
+        /*position: absolute;
         content: '';
         border-radius: 50%;
         height: 150px;
@@ -46,29 +59,41 @@
         opacity: 0;
         &:hover{
         cursor: pointer;
-        opacity: .35;
-        &:checked+.pick{
-           display: block;
-           z-index: 6;
-        }
+        opacity: .35;未成功*/
         }
        
     }
-    .pick{
-        position: absolute;
-        content: '';
-        right: 50%;
-        left: 30%;
-        bottom: 50%;
-        top: 30%;
-        z-index: 10;
-        display: none;
-    }   
+
+
+.show{
+    opacity:.8;
+    z-index: 10;
 }
 
-#head:checked+.pick{
+label {
+    position: relative;
+    input[type="checkbox"]{
+        display: none;
+    }
+}
+
+label .pick{
+    position: absolute;
+    content: '';
+    right: 50%;
+    left: 30%;
+    bottom: 50%;
+    top: 30%;
+    color: #ffffff;
+    display: none;
+    z-index: 20;
+    &:checked{
     display: block;
-    z-index: 6;
+    }
+}
+
+.arr-active{
+    display: block;
 }
 
 .title-step{
