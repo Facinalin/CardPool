@@ -29,11 +29,32 @@ const positionElement = (e) =>{
   
   cursorBig.style.transform = `translate3d(${mouseX}px,${mouseY}px,0)`;
 }
-
 window.addEventListener('mousemove', positionElement);*/
 
-var head = document.querySelector('.member-row');
-head.addEventListener('clcik', function (e) {
-  console.log(e.target.nodeName);
+var heads = document.querySelectorAll('.head');
+var headOt8 = document.querySelector('#head9');
+var memberImgAll = document.querySelectorAll('.per-member');
+heads.forEach(function (head) {
+  head.addEventListener('click', function (e) {
+    var arrow = e.target.nextElementSibling.children[1];
+    var memberImg = e.target.nextElementSibling.children[0];
+
+    if (e.target.checked && e.target.getAttribute('id') != 'head9') {
+      arrow.classList.add('arr-active');
+      memberImg.classList.add('active');
+    } else if (e.target.getAttribute('id') === 'head9') {
+      console.log('選到全員！');
+      memberImgAll.forEach(function (item) {
+        item.classList.remove('active');
+      });
+      memberImg.classList.toggle('active');
+    } else {
+      arrow.classList.remove('arr-active');
+      memberImg.classList.remove('active');
+    }
+
+    console.log(e.target.getAttribute('id'));
+    console.log(memberImgAll);
+  });
 });
 //# sourceMappingURL=all.js.map

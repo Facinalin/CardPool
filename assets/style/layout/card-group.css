@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .wrapper {
   width: 48%;
 }
@@ -26,6 +27,10 @@
   position: relative;
 }
 
+.active {
+  border: 8px solid #9B9BE3;
+}
+
 .member-img {
   position: relative;
   border-radius: 50%;
@@ -39,41 +44,60 @@
 .member-img .pseudo {
   position: absolute;
   content: '';
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  top: 0;
+  -webkit-transform: translateX(-50%) translateY(50%);
+      -ms-transform: translateX(-50%) translateY(50%);
+          transform: translateX(-50%) translateY(50%);
   left: 0;
-  right: 0;
-  background: #ffffff;
-  border: 5px solid #ffffff;
-  opacity: 0;
+  top: -50%;
+  z-index: 10;
+  display: none;
+  /*position: absolute;
+        content: '';
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border: 5px solid #ffffff;
+        opacity: 0;
+        &:hover{
+        cursor: pointer;
+        opacity: .35;未成功*/
 }
 
-.member-img .pseudo:hover {
-  cursor: pointer;
-  opacity: .35;
+.show {
+  opacity: .8;
+  z-index: 10;
 }
 
-.member-img .pseudo:hover:checked + .pick {
-  display: block;
-  z-index: 6;
+label {
+  position: relative;
 }
 
-.member-img .pick {
+label input[type="checkbox"] {
+  display: none;
+}
+
+label .pick {
   position: absolute;
   content: '';
   right: 50%;
   left: 30%;
   bottom: 50%;
   top: 30%;
-  z-index: 10;
+  color: #ffffff;
   display: none;
+  z-index: 20;
 }
 
-#head:checked + .pick {
+label .pick:checked {
   display: block;
-  z-index: 6;
+}
+
+.arr-active {
+  display: block;
 }
 
 .title-step {
