@@ -50,7 +50,7 @@ heads.forEach((head) => {
       console.log('選到團體！');
     }else{
         e.target.classList.toggle('active');
-        console.log('解除紫色');
+        console.log('toggle！');
     }
     console.log(e.target.getAttribute('id'));
   })
