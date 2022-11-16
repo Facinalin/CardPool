@@ -39,22 +39,23 @@ heads.forEach(function (head) {
     var arrow = e.target.nextElementSibling.children[1];
     var memberImg = e.target.nextElementSibling.children[0];
 
-    if (e.target.checked && e.target.getAttribute('id') != 'head9') {
-      arrow.classList.add('arr-active');
-      memberImg.classList.add('active');
-    } else if (e.target.getAttribute('id') === 'head9') {
-      console.log('選到全員！');
+    if (headOt8.classList.contains('active') && e.target.getAttribute('id') != 'head9') {
+      console.log('選到個人！'); //點擊到的不是headOt8 且 headOt8已active時，清除headOt8的active
+
+      headOt8.classList.remove('active');
+    } else if (e.target.getAttribute('id') === 'head9' && !e.target.classList.contains('active')) {
+      console.log('選到團體！'); //點擊到的是headOt8 且 點擊到的元素未包含active時，清除所有按鈕的active，再幫點到的該元素加上active
+
       memberImgAll.forEach(function (item) {
         item.classList.remove('active');
       });
-      memberImg.classList.toggle('active');
+      e.target.classList.add('active');
     } else {
-      arrow.classList.remove('arr-active');
-      memberImg.classList.remove('active');
+      console.log('解除紫色');
+      e.target.classList.toggle('active');
     }
 
     console.log(e.target.getAttribute('id'));
-    console.log(memberImgAll);
   });
 });
 //# sourceMappingURL=all.js.map
