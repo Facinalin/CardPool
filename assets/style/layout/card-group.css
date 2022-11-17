@@ -67,7 +67,7 @@
         opacity: .35;未成功*/
 }
 
-.show {
+.ps-show {
   opacity: .8;
   z-index: 10;
 }

@@ -34,7 +34,7 @@ window.addEventListener('mousemove', positionElement);*/
 var heads = document.querySelectorAll('.head');
 var headOt8 = document.querySelector('#head9');
 var memberImgAll = document.querySelectorAll('.per-member');
-heads.forEach(function (head) {
+heads.forEach(function (head, i) {
   head.addEventListener('click', function (e) {
     var arrow = e.target.nextElementSibling.children[1];
     var memberImg = e.target.nextElementSibling.children[0];
@@ -42,17 +42,20 @@ heads.forEach(function (head) {
     if (headOt8.classList.contains('active') && e.target.getAttribute('id') != 'head9') {
       //點擊到的不是headOt8 且 headOt8已active時，清除headOt8的active
       console.log('選到個人！');
-      headOt8.classList.remove('active');
-    } else if (e.target.getAttribute('id') === 'head9' && !e.target.classList.contains('active')) {
+      headOt8.classList.remove('active'); //<----這句沒反應
+    }
+
+    if (e.target.getAttribute('id') === 'head9' && !e.target.classList.contains('active')) {
       //點擊到的是headOt8 且 點擊到的元素未包含active時，清除所有按鈕的active，再幫點到的該元素加上active
-      console.log('選到團體！');
+      console.log('選到團體變成紫！');
       memberImgAll.forEach(function (item) {
         item.classList.remove('active');
       });
-      e.target.classList.add('active');
+      memberImgAll[i].classList.toggle('active');
+      headOt8.classList.toggle('active');
     } else {
       console.log('toggle！');
-      e.target.classList.toggle('active');
+      memberImgAll[i].classList.toggle('active');
     }
 
     console.log(e.target.getAttribute('id'));
