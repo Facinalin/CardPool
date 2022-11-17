@@ -9,10 +9,10 @@ button{
   background: none;
 }
 
-body{
+/*body{
   position: relative;
   z-index: -4;
-}
+}*/
 
 p, h1, h2, h3, h4, h5, h6, h7, h8{
   margin-bottom: 0;
@@ -64,6 +64,21 @@ p, h1, h2, h3, h4, h5, h6, h7, h8{
 .mb-60{
   margin-bottom: 60px;
 }
+
+.modal-backdrop.show{
+  opacity: 0;
+}
+
+.modal-body{
+  background: $white;
+}
+
+
+/*.nav-item .modal{
+  position: absolute;
+}*/
+
+
 /*
 .small{
   width: 8px;
@@ -110,14 +125,14 @@ p, h1, h2, h3, h4, h5, h6, h7, h8{
 .banner{
   height: 730px;
   padding: 0 90px;
-  position: relative;
-  z-index: -3;
+  /*position: relative;
+  z-index: -3;*/
 }
 
-.banner-txt{
+/*.banner-txt{
   position: absolute;
   z-index: -2;
-}
+}*/
 
 .banner-txt .cta-btn-main{
   overflow: hidden;
