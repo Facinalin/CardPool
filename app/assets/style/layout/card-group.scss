@@ -11,7 +11,7 @@
 }
 
 .per-member{
-    cursor: pointer;
+   
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -31,6 +31,7 @@
 }
 
 .member-img{
+    cursor: pointer;
     position: relative;
     border-radius: 50%;
     border: 8px solid #ffffff;
@@ -121,5 +122,26 @@ label .pick{
         padding: 16px 30px;
     }
   }
+.card-head{
+    text-align: center;
+    width: 100%;
+}
+.card-img-topa{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 262px;
+    height: 262px;
+}
+.card-img-top{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.group-mem-num{
+    font-weight: 600;
+}
 
 

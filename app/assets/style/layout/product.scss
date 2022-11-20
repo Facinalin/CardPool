@@ -1,0 +1,147 @@
+.product-img{
+    background-image: url(https://i.imgur.com/n5wbL5Q.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    max-width: 100%;
+    height: auto;
+    max-height: 520px;
+}
+
+.small-head{
+    width: 74px;
+    height: 74px;
+}
+
+.member-row-sm{
+    width: 70%;
+}
+
+.member-img-sm{
+    border: 6px solid #ffffff;
+    &:hover{
+    border: 6px solid #1e1c1c;
+    }
+}
+
+.disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover{
+    border: 6px solid #ffffff;
+}
+}
+
+.tx-disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover{
+    border:0px;
+    }
+}
+
+.btn-area .product-btn{
+    color: #9B9BE3;
+    &:hover{
+        color: #ffffff;
+        background: #9B9BE3;  
+    }
+}
+
+.notice{
+    margin-top: 7px;
+    position: relative;
+    line-height: 2;
+    &::before{
+        content: "拆卡注意事項";
+        position: absolute;
+        transform: translate(8%,-100%);
+        background: #E8A8D4;
+        color: #ffffff;
+        padding: 12px 20px;
+        border-radius: 15px 15px 0 0;
+
+    }
+}
+
+.bd-top-opa{
+   border-top: 1px solid rgba(155, 155, 227, .7); 
+}
+
+.details-1{
+    margin-top: 7px;
+    position: relative;
+    line-height: 2;
+    &::before{
+        content: "商品資訊";
+        position: absolute;
+        transform: translate(8%,-100%);
+        background: #9B9BE3;
+        color: #ffffff;
+        padding: 12px 20px;
+        border-radius: 15px 15px 0 0;
+
+    }
+}
+
+.seller{
+    width: 100%;
+}
+
+.seller-pic{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.accordion{
+    width: 100%;
+}
+
+.seller-btn{
+    color: #E8A8D4;
+    &:hover{
+        color: #ffffff;
+        background: #E8A8D4;  
+    }
+}
+
+.description{
+    white-space:pre-wrap; 
+}
+
+.red-area{
+    background: #FFE1EC;
+    .member-img-sm{
+    border: 6px solid #FFE1EC;
+    &:hover{
+    border: 6px solid #1e1c1c;
+    }
+    }
+}
+
+.blue-area{
+    background: #DFE8FF;
+    .member-img-sm{
+    border: 6px solid #DFE8FF;
+    &:hover{
+    border: 6px solid #1e1c1c;
+    }
+    .disabled:hover{
+    border: none;
+    }
+    }
+}
+
+.white-area{
+    background: #ffffff;
+    .member-img-sm{
+    border: 6px solid #ffffff;
+    &:hover{
+    border: 6px solid #1e1c1c;
+    }
+    }
+}
+
+.member-row-limit{
+    width: 50%;
+}
