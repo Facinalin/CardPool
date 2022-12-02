@@ -75,30 +75,42 @@ toSignBtn.addEventListener('click', (e) =>{
 //登入註冊區-end
 
 //產品渲染區-start
+const api_Pro_Url = 'http://localhost:3000/products';
 let productData = [];
 
-getProduct();
+getProduct(`${api_Pro_Url}`);
 
-function getProduct(){
-  axios.get('http://localhost:3000/products')
+//`${api_Pro_Url}`
+
+function getProduct(url){
+  axios.get(url)
   .then(function(response){
     console.log(response.data);
     productData = response.data;
-    //renderProduct(productData);
+    renderProduct(productData);
   })
   .catch(function(error){
     console.log(error);
   })
 }
 
+
+
 const productList = document.querySelector('.product-row');
 
 console.log(productList);
 function renderProduct(data){
    let str = "";
+   let obj= {};
    data.forEach(item =>{
     const {id, title, imgUrl, channel, price, leftmember} = item;
     if(data.length>0 && productList){
+      //obj為計算每一個item裡的leftmember中true跟false數量的物件
+    obj = Object.values(leftmember).reduce((a,b) => {
+      if(a[b]){a[b]++;}
+      else{a[b]=1}
+      return a},{});
+      //下方組html字串
     str += `<div id="${id}" class="card col-lg-3 col-md-4 col-sm-6 px-2 border border-0 mb-5">
     <div class="card-head d-flex justify-content-center">
     <a href="/product.html" class="card-img-topa"><img src="${imgUrl}" class="card-img-top" alt="..."></a>
@@ -107,7 +119,7 @@ function renderProduct(data){
       <p class="card-title fz-20-w">${title}</p>
         <h6 class="channel text-primary mb-2">${channel}</h6>
         <h6 class="price text-secondary">$<span>${price}</span></h6>
-      <p class="card-text mt-7">差<span class="group-mem-num text-orange">${leftmember.length}</span>位成團</p>
+      <p class="card-text mt-7">差<span class="group-mem-num text-orange">${obj['true']}</span>位成團</p>
     </div>
   </div>`;
 }else{
@@ -127,9 +139,9 @@ findGroupEvent();
 function findGroupEvent(){
   if(findGroupBtn){
 findGroupBtn.addEventListener('click', (e) =>{
-  let arr = [];
-  let memId = [];
-  let testArr = [];
+  let arr = []; //active的id們的陣列
+  let memId; //active的id
+  let testArr = []; //篩選出空位的成員：第一次聯集
 memberImgAll.forEach(el =>{
     if(el.classList.contains('active')){
       memId = (el.previousElementSibling).getAttribute('id')[4];  
@@ -137,35 +149,61 @@ memberImgAll.forEach(el =>{
     }
   })//取畫面上的成員id
 
-  console.log(memId); //memId是個陣列
-  //如果要用memId跑一個簡單的forEach就會顯示is not a function如下
-  memId.forEach(el =>{
-    console.log(el);
-  })
-
-  /*productData.forEach(item =>{
-   const {leftmember} = item;
-   memId.forEach(el =>{
-    if(leftmember[el]==true){
-      testArr.push(el);
+    productData.forEach(item =>{
+      const {leftmember, id} = item;
+      //只要符合其中一位成員就先丟到陣列裡
+      arr.forEach(el =>{
+      if(leftmember[el]===true){
+        testArr.push(id);
+      }
+    })
+    })
+    console.log(testArr); 
+    //第一次聯集的結果先轉成key與value互配形式：得到每一個產品id有符合幾位成員
+    let compare = Object.entries(testArr.reduce((acc,cur) =>{
+      if(acc[cur]){
+        acc[cur]++;
+      }else{
+        acc[cur]=1;
+      }
+      return acc;
+    },{}));
+    let filtId = [];
+    console.log(compare);
+    //篩選出空位的成員：第二次增加條件達到交集，要兩位皆符合才會回傳
+    compare.forEach(item =>{
+      if(item[1]==arr.length){
+        filtId.push(item[0]);
+      }
+    })
+    console.log(`產品id${filtId}`); //這是篩選出來可渲染的產品id
+    //組json的url字串
+    let api_Pro_Id_Url = `${api_Pro_Url}?id=`;
+    let filt_API_Url = "";
+    let checkEnd = '';
+    filtId.forEach(item =>{
+      if(filtId.length===1){
+      api_Pro_Id_Url+= item;  
+      }else{
+      api_Pro_Id_Url+=`${item}&id=`; 
+      } 
+    })
+    checkEnd = api_Pro_Id_Url.substring(api_Pro_Id_Url.length-4,api_Pro_Id_Url.length)
+    //修剪字串末多餘字元
+    if(checkEnd=="&id="){
+      filt_API_Url = api_Pro_Id_Url.substring(0,api_Pro_Id_Url.length-4);
     }
-    console.log(testArr);
-   })
-  })*/
-  
-  console.log(productData);
-  console.log('在這');
-  console.log(arr);
-  
+    console.log(api_Pro_Id_Url);
+    console.log(filt_API_Url);//實際上要axios.get的json url
+    getProduct(`${filt_API_Url}`);
 })
 }
 }
 
 
-
-
-const array1 = [5, 12, 8, 130, 44];
-const arr2 = [5, 12, 8, 130, 44];
+//api_Pro_Id_Url.substring(0,api_Pro_Id_Url.length-4)
+//const array1 = [5, 12, 8, 130, 44];
+//const arr2 = [5, 12, 8, 130, 44];
 //console.log(JSON.stringify(array1)===JSON.stringify(arr2));
 
 //可以用sort因為陣列長度<10，sort會使用Insertion Sort，不會有10以上Quick Sort的不穩定現象。
