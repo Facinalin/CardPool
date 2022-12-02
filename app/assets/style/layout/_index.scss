@@ -34,6 +34,10 @@ p, h1, h2, h3, h4, h5, h6, h7, h8, li{
   letter-spacing: 4px;
 }
 
+.rounded-xl{
+  border-radius: 15px;
+}
+
 .rounded-xxl{
   border-radius: 20px;
 }
@@ -48,8 +52,16 @@ p, h1, h2, h3, h4, h5, h6, h7, h8, li{
   height: 45px;
 }
 
+.pb-80{
+  padding-bottom: 80px;
+}
+
 .fz-8{
   font-size: 8px;
+}
+
+.fz-16-o{
+  font-size: 16px;
 }
 
 .fz-16{
@@ -59,11 +71,17 @@ p, h1, h2, h3, h4, h5, h6, h7, h8, li{
 
 .fz-20{
   font-size: 20px;
+  font-weight: 500;
 }
 
 .fz-20-w{
   font-size: 20px;
   font-weight: 600;
+}
+
+.fz-24-w{
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .fz-28{
@@ -72,6 +90,11 @@ p, h1, h2, h3, h4, h5, h6, h7, h8, li{
 
 .fz-66{
   font-size: 66px;
+}
+
+.fz-66-w{
+  font-size: 66px;
+  font-weight: 500;
 }
 
 .fz-108{
