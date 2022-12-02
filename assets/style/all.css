@@ -13100,6 +13100,10 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
   letter-spacing: 4px;
 }
 
+.rounded-xl {
+  border-radius: 15px;
+}
+
 .rounded-xxl {
   border-radius: 20px;
 }
@@ -13114,8 +13118,16 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
   height: 45px;
 }
 
+.pb-80 {
+  padding-bottom: 80px;
+}
+
 .fz-8 {
   font-size: 8px;
+}
+
+.fz-16-o {
+  font-size: 16px;
 }
 
 .fz-16 {
@@ -13125,11 +13137,17 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
 
 .fz-20 {
   font-size: 20px;
+  font-weight: 500;
 }
 
 .fz-20-w {
   font-size: 20px;
   font-weight: 600;
+}
+
+.fz-24-w {
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .fz-28 {
@@ -13138,6 +13156,11 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
 
 .fz-66 {
   font-size: 66px;
+}
+
+.fz-66-w {
+  font-size: 66px;
+  font-weight: 500;
 }
 
 .fz-108 {
@@ -13440,10 +13463,6 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
   position: relative;
 }
 
-.active {
-  border: 8px solid #9B9BE3;
-}
-
 .member-img {
   cursor: pointer;
   position: relative;
@@ -13455,30 +13474,8 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
   border: 8px solid #1e1c1c;
 }
 
-.member-img .pseudo {
-  position: absolute;
-  content: '';
-  -webkit-transform: translateX(-50%) translateY(50%);
-      -ms-transform: translateX(-50%) translateY(50%);
-          transform: translateX(-50%) translateY(50%);
-  left: 0;
-  top: -50%;
-  z-index: 10;
-  display: none;
-  /*position: absolute;
-        content: '';
-        border-radius: 50%;
-        height: 150px;
-        width: 150px;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #ffffff;
-        border: 5px solid #ffffff;
-        opacity: 0;
-        &:hover{
-        cursor: pointer;
-        opacity: .35;未成功*/
+.active {
+  border: 8px solid #9B9BE3;
 }
 
 .ps-show {
@@ -13733,6 +13730,34 @@ label .pick:checked {
 
 .member-row-limit {
   width: 50%;
+}
+
+.poster-area {
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 100%;
+  height: auto;
+  max-height: 950px;
+}
+
+.signup-bg {
+  background-image: url(https://i.imgur.com/uCufgw6.jpg);
+}
+
+.login-bg {
+  background-image: url(https://i.imgur.com/ntEV4zG.jpg);
+}
+
+.signUpInfo-btn {
+  width: 100%;
+}
+
+.log-sign-title {
+  -webkit-text-stroke: 1.4px #1E1C1C;
+}
+
+.toLogin-btn:hover {
+  border-color: #E8A8D4;
 }
 
 /*# sourceMappingURL=all.css.map */

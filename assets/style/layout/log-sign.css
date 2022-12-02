@@ -1,0 +1,29 @@
+.poster-area {
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 100%;
+  height: auto;
+  max-height: 950px;
+}
+
+.signup-bg {
+  background-image: url(https://i.imgur.com/uCufgw6.jpg);
+}
+
+.login-bg {
+  background-image: url(https://i.imgur.com/ntEV4zG.jpg);
+}
+
+.signUpInfo-btn {
+  width: 100%;
+}
+
+.log-sign-title {
+  -webkit-text-stroke: 1.4px #1E1C1C;
+}
+
+.toLogin-btn:hover {
+  border-color: #E8A8D4;
+}
+
+/*# sourceMappingURL=log-sign.css.map */

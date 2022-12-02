@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .wrapper {
   width: 48%;
 }
@@ -26,10 +25,6 @@
   position: relative;
 }
 
-.active {
-  border: 8px solid #9B9BE3;
-}
-
 .member-img {
   cursor: pointer;
   position: relative;
@@ -41,30 +36,8 @@
   border: 8px solid #1e1c1c;
 }
 
-.member-img .pseudo {
-  position: absolute;
-  content: '';
-  -webkit-transform: translateX(-50%) translateY(50%);
-      -ms-transform: translateX(-50%) translateY(50%);
-          transform: translateX(-50%) translateY(50%);
-  left: 0;
-  top: -50%;
-  z-index: 10;
-  display: none;
-  /*position: absolute;
-        content: '';
-        border-radius: 50%;
-        height: 150px;
-        width: 150px;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #ffffff;
-        border: 5px solid #ffffff;
-        opacity: 0;
-        &:hover{
-        cursor: pointer;
-        opacity: .35;未成功*/
+.active {
+  border: 8px solid #9B9BE3;
 }
 
 .ps-show {
