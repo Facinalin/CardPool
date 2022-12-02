@@ -1,0 +1,333 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "MAXIDENT專輯",
+      "imgUrl": "https://i.imgur.com/ntAKyNx.png",
+      "price": "440",
+      "sellerId": 1,
+      "channel": "一般",
+      "type": "一般",
+      "domesticFee": 60,
+      "internationalFee": {
+        "complement": false,
+        "amount": 0
+      },
+      "leftmember": {
+        "1": true,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false
+      },
+      "description": "*請看完內文再排卡 🧚🏻‍♂ 推特收卡請注意：＊本團原賣家為推特賣家，有一定風險。請自行評估。＊本團僅負責『代收』小卡，不負產品品質相關責任。＊能快速匯款者再來！＊推特收卡交期久（三週～一個月），接受者再排。🧚🏻‍♀ 紅區＆藍區需1:1帶！＊發行時間：2022.10.07【限量版 GO ver.配置】．外盒大小：164mm x 225mm x 14mm ．寫真書：80頁 ．CD：1片"
+    },
+    {
+      "id": 2,
+      "title": "nacific化妝品",
+      "imgUrl": "https://i.imgur.com/iCRMYUl.jpg",
+      "price": "450",
+      "sellerId": 1,
+      "channel": "阿拉丁",
+      "type": "拆卡",
+      "domesticFee": 60,
+      "internationalFee": {
+        "complement": true,
+        "amount": 0
+      },
+      "leftmember": {
+        "1": false,
+        "2": false,
+        "3": true,
+        "4": false,
+        "5": false,
+        "6": true,
+        "7": true,
+        "8": false
+      },
+      "description": "售 已自砍價格拜託帶回家🙏🙏星河2.0 彬 （非現）300以上綁圖二～三的 1:3 🐿圖二圖三可單帶滿100出貨🐿一律視廠損🐿特典可看卡況（需自己提沒有提不主動提供）🐿走賣貨便貨付＋15"
+    },
+    {
+      "id": 3,
+      "title": "濟州島卡冊含特典",
+      "imgUrl": "https://i.imgur.com/vJa3EcS.png",
+      "price": "450",
+      "sellerId": 1,
+      "channel": "新娜拉",
+      "type": "拆卡",
+      "domesticFee": 60,
+      "internationalFee": {
+        "complement": false,
+        "amount": 0
+      },
+      "leftmember": {
+        "1": true,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": true
+      },
+      "description": "#拆 舊文已刪 有找到其他代購所以重新發文濟州島卡冊含特典 $600/1 少量二補 旻辰 —城玟寅 —燦彬 拆完組合優先確定買到需先匯款，沒拆完或收單即流團。代購說會盡量配套，沒有配套不退款，確認卡位視同了解規則，不得臨時更改。"
+    },
+    {
+      "id": 4,
+      "title": "MAXIDENT專輯Case ver.",
+      "imgUrl": "https://i.imgur.com/n5wbL5Q.png",
+      "price": "450",
+      "sellerId": 1,
+      "channel": "新娜拉",
+      "type": "拆卡",
+      "domesticFee": 60,
+      "internationalFee": {
+        "complement": false,
+        "amount": 0
+      },
+      "leftmember": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": false,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true
+      },
+      "description": "可自行併單，但賣家會直接與主併進行交易，不負責併單之爭議。請主併開一統整樓，併單者請删除原留言，改在主併的統整樓留言，以利版面容易閱讀。▶️可自行開文拆圖，惟請附上本文連結。注意事項：＊因小卡數量多，恕不一一拍卡況，敬請見諒，但會提供單卡金額在400以上的對光影片，詳見卡況樓。 ＊請默認微損，並請理解PVC材質的易有瑕疵，對卡況要求完美或有疑慮者請繞道，有檢查到明顯損傷的小卡會在卡況樓裡說明。＊留言喊單即代表同意購買，若您想購買的部分物品被前面順位帶走，仍須收其餘物品。＊提醒：1️⃣本人僅是業餘賣家，本交易不適用7天猶豫期。2️⃣未成年人購買請先取得法定代理人同意，以免事後造成大家的困擾。❣️12月3日(六)晚上10:00:59結單，若有人全收便提前結單。"
+    },
+    {
+      "id": 5,
+      "title": "GO生專輯",
+      "imgUrl": "https://i.imgur.com/b5mZkA2.jpg",
+      "price": "450",
+      "sellerId": 1,
+      "channel": "新娜拉",
+      "type": "拆卡",
+      "domesticFee": 60,
+      "internationalFee": {
+        "complement": false,
+        "amount": 0
+      },
+      "leftmember": {
+        "1": false,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true
+      },
+      "description": "#拆 推特收卡請注意"
+    },
+    {
+      "id": 6,
+      "title": "IN生專輯",
+      "imgUrl": "https://i.imgur.com/cAeIkJp.jpg",
+      "price": "450",
+      "sellerId": 1,
+      "channel": "新娜拉",
+      "type": "拆卡",
+      "domesticFee": 60,
+      "internationalFee": {
+        "complement": false,
+        "amount": 0
+      },
+      "leftmember": {
+        "1": false,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": false,
+        "6": true,
+        "7": false,
+        "8": false
+      },
+      "description": "#拆 推特收卡請注意"
+    },
+    {
+      "id": 7,
+      "title": "Oddinary水晶專",
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg",
+      "price": "450",
+      "sellerId": 1,
+      "channel": "新娜拉",
+      "type": "拆卡",
+      "domesticFee": 60,
+      "internationalFee": {
+        "complement": false,
+        "amount": 0
+      },
+      "leftmember": {
+        "1": true,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false
+      },
+      "description": "#拆 推特收卡請注意"
+    },
+    {
+      "id": 8,
+      "title": "Skzoo娃衣",
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg",
+      "price": "450",
+      "sellerId": 1,
+      "channel": "新娜拉",
+      "type": "拆卡",
+      "domesticFee": 60,
+      "internationalFee": {
+        "complement": false,
+        "amount": 0
+      },
+      "leftmember": {
+        "1": false,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": false,
+        "6": false,
+        "7": true,
+        "8": false
+      },
+      "description": "#拆 推特收卡請注意"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "紅惡魔",
+      "email": "reddemon145@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 0,
+      "imgUrl": "https://i.imgur.com/n5wbL5Q.png"
+    },
+    {
+      "id": 2,
+      "name": "Liz",
+      "email": "loen90@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 2,
+      "imgUrl": "https://i.imgur.com/ntAKyNx.png"
+    },
+    {
+      "id": 3,
+      "name": "毬毬",
+      "email": "rekokomon885@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 3,
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Ponny",
+      "email": "reddemonJK@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 0,
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg"
+    },
+    {
+      "id": 5,
+      "name": "阿彬",
+      "email": "reddemon0325@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 0,
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg"
+    },
+    {
+      "id": 6,
+      "name": "阿糯代購",
+      "email": "Keemon1998@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 0,
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg"
+    },
+    {
+      "id": 7,
+      "name": "藍精靈",
+      "email": "blue22fairy@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 6,
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Oh myIdol",
+      "email": "reFJIOmon999@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 0,
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg"
+    },
+    {
+      "id": 9,
+      "name": "南方絲帶",
+      "email": "staysouth@gmail.com",
+      "password": "demonDLee1128",
+      "role": "user",
+      "groupHistory": 0,
+      "imgUrl": "https://i.imgur.com/kBYi7Cx.jpg"
+    },
+    {
+      "email": "ejijo4678@gmail.com",
+      "password": "$2a$10$lZ9wTsK9Lo3GTcSbrWQQCu37/sMEV.LVzicN5QvChoIpO.vkmvTde",
+      "name": "紅惡魔",
+      "id": 10
+    },
+    {
+      "email": "jiojjoj",
+      "password": "testpooo",
+      "id": 11
+    },
+    {
+      "email": "localtest",
+      "password": "testseccuees899",
+      "id": 12
+    },
+    {
+      "email": "jioh",
+      "password": "67989jhgj",
+      "id": 13
+    },
+    {
+      "email": "huihihi",
+      "password": "rerer",
+      "id": 14
+    },
+    {
+      "email": "leedonotknow@gmail.com",
+      "password": "jio78989re",
+      "id": 15
+    },
+    {
+      "email": "doleeknow@gmail",
+      "password": "897kjkh",
+      "id": 16
+    },
+    {
+      "email": "dokokorel@gmail",
+      "password": "$2a$10$UstFbCRY1B8ibm3EbZ5wQ.wW7rqNV2fj3.oBo97hBNqe8XlZDK2mu",
+      "name": "auth測試第一人",
+      "id": 17
+    }
+  ],
+  "carts": [],
+  "groups": [],
+  "orders": [],
+  "bookmarks": []
+}
