@@ -1,0 +1,21 @@
+---
+title: Boostrap Index
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="product-row-card row gx-1 my-8">
+    <div class="card col-lg-3 col-md-4 col-sm-6 px-2 border border-0 mb-5">
+      <div class="card-head d-flex justify-content-center">
+      <a href="/product.html?id=${id}" class="card-img-topCarda"><img src="https://i.imgur.com/6QQWwvM.jpg" class="card-img-topCard" alt="..."></a>
+    </div>
+      <div class="card-body px-9">
+        <p class="card-title fz-20-w">${title}</p>
+          <h6 class="channel text-primary mb-2">Hyunjin</h6>
+          <h6 class="price text-secondary">$<span>${price}</span></h6>
+        <p class="card-text mt-7">差<span class="group-mem-num text-orange">${obj['true']}</span>位成團</p>
+      </div>
+    </div>
+
+  </div>

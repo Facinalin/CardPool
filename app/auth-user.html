@@ -1,0 +1,77 @@
+---
+title: Boostrap Index
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<h2 class="mx-4 my-4">這是會員專區</h2>
+<div class="userPanel">
+    <div class="mx-3 my-4 userNav px-1 py-1">
+      <div class="accordion text-white" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <i class="fa-solid fa-thumbtack me-3"></i>訂單管理
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <a href="#" class="text-primary">
+                訂單進度查詢
+            </a>
+            </div>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-maingray">
+                <a href="#">
+                 取消/ 更改訂單
+                </a>
+                </div>
+          </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUserInfo" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fa-solid fa-thumbtack me-3"></i>個人資訊管理
+          </button>
+        </h2>
+        <div id="collapseUserInfo" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+              <a href="#" class="text-primary">
+              隱私資訊
+          </a>
+          </div>
+          <div id="collapseUserInfo" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-maingray">
+              <a href="#">
+               訊息匣
+              </a>
+              </div>
+        </div>
+      </div>
+  </div>
+          <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLikeGroup" aria-expanded="true" aria-controls="collapseOne">
+                <i class="fa-solid fa-thumbtack me-3"></i>收藏與排卡
+            </button>
+          </h2>
+          <div id="collapseLikeGroup" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <a href="#" class="text-primary">
+                卡位狀態查詢
+            </a>
+            </div>
+            <div id="collapseLikeGroup" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-maingray">
+                <a href="#">
+                我的收藏
+                </a>
+                </div>
+          </div>
+        </div>
+    </div>
+</div>
+<table class="border border-primary"></table>
+</div>

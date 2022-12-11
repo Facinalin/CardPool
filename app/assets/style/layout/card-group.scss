@@ -122,4 +122,18 @@ label .pick{
     font-weight: 600;
 }
 
+/*這是僅卡的*/
+.card-img-topCard{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 210px;
+    height: 325px;
+    border-radius: 12px;
+}
+
+.product-row-card{
+    padding: 24px;
+}
+
 

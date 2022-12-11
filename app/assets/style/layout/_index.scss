@@ -2,6 +2,7 @@
 a, img{
   display: block;
   max-width: 100%;
+  text-decoration: none;
 }
 
 button{
@@ -14,7 +15,7 @@ button{
   z-index: -4;
 }*/
 
-p, h1, h2, h3, h4, h5, h6, h7, h8, li{
+p, h1, h2, h3, h4, h5, h6, h7, h8, ul, li{
   margin-bottom: 0;
   line-height: 1.5;
 }
@@ -58,6 +59,10 @@ p, h1, h2, h3, h4, h5, h6, h7, h8, li{
 
 .fz-8{
   font-size: 8px;
+}
+
+.fz-14-o{
+  font-size: 14px;
 }
 
 .fz-16-o{
@@ -164,7 +169,7 @@ p, h1, h2, h3, h4, h5, h6, h7, h8, li{
 }
 
 .banner{
-  height: 730px;
+  height: 100vh;
   padding: 0 90px;
   /*position: relative;
   z-index: -3;*/
@@ -323,4 +328,124 @@ p, h1, h2, h3, h4, h5, h6, h7, h8, li{
 .bg5{
   background: url(/assets/images/felix-card.jpeg);
   background-size: cover;
+}
+
+/*GSAP*/
+.scroller {
+  height: 100vh;
+}
+
+.orange {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh; /*設定100vh視覺效果好，避免效果一半就開始*/
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #753500;
+}
+
+.text {
+  color: #fff;
+}
+
+.black {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh; /*設定100vh視覺效果好*/
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #070707;
+}
+
+.text-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 450px;
+  height: 80vh;
+}  /*panel-text的parent*/
+/*text-wrap的child*/
+.panel-text {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  /*text-transform: uppercase;*/
+  font-weight: 900;
+  text-align:center;
+  background-color: #070707;
+ transform:translateY(100%);
+  opacity: 0;
+}
+.panel-text.purple-text {
+  color: #9B9BE3;
+}
+
+.panel-text.orange-text {
+  color: #E8A8D4;
+}
+/*色塊區*/
+/*panel 父層*/
+.p-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 450px;
+  height: 80vh;
+}
+/*p-wrap 子層*/
+.panel {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  /*background-image: url("../images/5ed12171d9d512cb2feead83_5.jpg");*/
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.panel._2 {
+  z-index: 1;
+  /*background-image: url("../images/5f5a5b3515c4dd0c2c455925_110642301_938622823267359_7859124022958180678_n201.jpg");*/
+}
+
+.panel.orange {
+  z-index: auto;
+  background-color: #E8A8D4;
+  background-image: none;
+}
+
+.panel.purple {
+  z-index: auto;
+  background-color: #9B9BE3;
+  background-image: none;
+}
+
+.box{
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }

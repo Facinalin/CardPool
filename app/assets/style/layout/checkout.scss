@@ -1,0 +1,180 @@
+.step-num{
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #9B9BE3;
+    text-align: center;
+    padding: 6px;
+    position: relative;
+}
+
+.step-num::after{
+    content:'';
+    position: absolute;
+    width: 278px;
+    height: 1.3px;
+    background: #9B9BE3;
+    bottom:4px;
+    left:12px;
+    z-index:-1;
+
+}
+
+.navigate{
+    background: #EE6766;
+}
+
+.checkout-step{
+    padding-left: 0;
+}
+
+.pink-box{
+    margin-top: 120px;
+    margin-bottom: 48px;
+    position: relative;
+    line-height: 2;
+    &::before{
+        content: "";
+        position: absolute;
+        transform: translate(18%,-100%);
+        background: #E8A8D4;
+        color: #ffffff;
+        padding: 12px 20px;
+        border-radius: 15px 15px 0 0;
+        font-size: 20px;
+    } 
+}
+
+.purple-box{
+    margin-top: 120px;
+    margin-bottom: 48px;
+    position: relative;
+    line-height: 2;
+    &::before{
+        content: "";
+        position: absolute;
+        transform: translate(18%,-100%);
+        background: #9B9BE3;
+        color: #ffffff;
+        padding: 12px 20px;
+        border-radius: 15px 15px 0 0;
+        font-size: 20px;
+    } 
+}
+
+.total::before{
+   content: "本次結帳總額";
+}
+
+.total-ul{
+    width: 100%;
+}
+
+.total-item{
+    color: #EE6766;
+}
+
+.payment-detail::before{
+        content: "付款方式";
+}
+
+.invoice-detail::before{
+    content: "發票資訊";
+}
+
+.total-detail::before{
+    content:'含運統計總額';
+}
+
+.courier::before{
+    content:'勾選運送方式';
+   
+}
+
+.ifComplement::before{
+    content:'是否二補款項';
+}
+
+.checkbox{
+    border: 1px solid #E8A8D4;
+    border-radius:6px;
+}
+
+.shopping-cart{
+    width: 100%;
+    thead{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+}  
+tbody{
+    text-align: center;
+}
+}
+
+.perCartPic{
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+.note{
+    color: #EE6766;
+    font-size: 12px;
+}
+
+.discardAllBtn{
+    background: #EE6766;
+    color: #ffffff;
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius:15px;
+    &:hover{
+    color:#EE6766;
+    background: #1e1c1c;
+    }
+}
+
+.js-total{
+    color:#EE6766;
+}
+
+.address-select{
+    border: 1px solid #E8A8D4;
+    border-radius:6px;
+    padding: 4px 8px;
+}
+
+.address-option{
+    background: #ffffff;
+    border: 1px solid #E8A8D4;
+    border-radius:6px;
+    padding: 2px 4px;
+}
+
+.next-step{
+    display: inline-block;
+    border: 2px solid #9B9BE3;
+    background:#9B9BE3;
+    color: #ffffff;
+    border-radius:10px;
+    padding: 10px 14px;
+    &:hover{
+        background:#ffffff;
+        color: #9B9BE3;
+    }
+}
+
+.seperate{
+    border-bottom:1px solid #E8A8D4;
+}
+
+.orderId{
+    width: 100%;
+}
+
+
+
+
