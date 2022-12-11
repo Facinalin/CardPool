@@ -23,7 +23,7 @@
     <nav class="navbar-font navbar navbar-expand-lg navbar-light bg-white container">
       <div class="container-fluid justify-content-between">
           <div>
-        <a class="logo navbar-brand" href="#"><img class="logo-sz" src="https://i.imgur.com/gmA3prD.png" alt=""></a>
+        <a class="logo navbar-brand" href="/index.html"><img class="logo-sz" src="https://i.imgur.com/gmA3prD.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,35 +35,34 @@
                 代購
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another</a></li>
+                <li><a class="dropdown-item" href="#">拆卡</a></li>
+                <li><a class="dropdown-item" href="#">官方周邊</a></li>
+                <li><a class="dropdown-item" href="#">代簽</a></li>
+                <li><a class="dropdown-item" href="#">打榜</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-maingray" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                轉販
+                二手
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another</a></li>
+                <li><a class="dropdown-item" href="#">換卡</a></li>
+                <li><a class="dropdown-item" href="#">周邊</a></li>
+                <li><a class="dropdown-item" href="#">空專</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-maingray" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 飯製
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another</a></li>
-              </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-maingray" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 活動
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another</a></li>
+                <li><a class="dropdown-item" href="#">SKZ全球投票</a></li>
+                <li><a class="dropdown-item" href="#">舞蹈揪團</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -89,8 +88,8 @@
               </div>
               
             </li>
-            <li calss="nav-item">
-              <a href="" class="nav-link">
+            <li class="nav-item userArea">
+              <a href="/log-sign.html" class="nav-link">
                 <i class="fa-regular fa-user icon-width-lg text-maingray"></i>
               </a>
             </li>
@@ -106,12 +105,12 @@
       <div class="col-6 py-8">
         <h1 class="mb-9 fz-66-w text-maingray log-sign-title">加入<br>會員</h1>
         <form action="">
-         <label for="accountInput" class="mb-2"><h3 class="fz-20">帳號 Account/ Email Address</h3></label>
-         <input type="text" id="accountInput" class="form-control rounded-xl border border-secondary mb-5 py-2 px-3" placeholder="請輸入信箱" aria-label="Username" aria-describedby="basic-addon1">
-         <label for="passwordInput" class="mb-2"><h3 class="fz-20">密碼 Password</h3></label>
-         <input type="text" id="passwordInput" class="form-control rounded-xl border border-secondary mb-5 py-2 px-3" placeholder="請輸入8位數密碼，含英文數字" aria-label="Password" aria-describedby="basic-addon1">
-         <label for="passwordComInput" class="mb-2"><h3 class="fz-20">確認密碼 Confirm Password</h3></label>
-         <input type="text" id="passwordComInput" class="form-control rounded-xl border border-secondary mb-6 py-2 px-3" placeholder="請再次輸入設定好的密碼" aria-label="Password-confirm" aria-describedby="basic-addon1">
+         <label for="signAccountInput" class="mb-2"><h3 class="fz-20">帳號 Account/ Email Address</h3></label>
+         <input type="text" id="signAccountInput" class="form-control rounded-xl border border-secondary mb-5 py-2 px-3" placeholder="請輸入信箱" aria-label="Username" aria-describedby="basic-addon1">
+         <label for="signPasswordInput" class="mb-2"><h3 class="fz-20">密碼 Password</h3></label>
+         <input type="text" id="signPasswordInput" class="form-control rounded-xl border border-secondary mb-5 py-2 px-3" placeholder="請輸入8位數密碼，含英文數字" aria-label="Password" aria-describedby="basic-addon1">
+         <label for="signPasswordComInput" class="mb-2"><h3 class="fz-20">確認密碼 Confirm Password</h3></label>
+         <input type="text" id="signPasswordComInput" class="form-control rounded-xl border border-secondary mb-6 py-2 px-3" placeholder="請再次輸入設定好的密碼" aria-label="Password-confirm" aria-describedby="basic-addon1">
          <button type="button"  class="signUpInfo-btn btn btn-secondary rounded-xxl text-white py-2 px-9 mb-4 fz-20">註冊</button>
         </form>
         <button type="button" id="toLogin-btn" class="btn btn-white border border-primary rounded-xxl text-primary py-2 px-3 fz-16-o">已有帳號？點此登入</button>
@@ -131,11 +130,11 @@
       <div class="col-6 pt-8 pb-80">
         <h1 class="mb-9 fz-66-w text-maingray log-sign-title">會員<br>登入</h1>
         <form action="">
-         <label for="accountInput" class="mb-2"><h3 class="fz-20">帳號 Account/ Email Address</h3></label>
-         <input type="text" id="accountInput" class="form-control rounded-xl border border-secondary mb-5 py-2 px-3" placeholder="請輸入信箱" aria-label="Username" aria-describedby="basic-addon1">
-         <label for="passwordInput" class="mb-2"><h3 class="fz-20">密碼 Password</h3></label>
-         <input type="text" id="passwordInput" class="form-control rounded-xl border border-secondary mb-5 py-2 px-3" placeholder="請輸入8位數密碼，含英文數字" aria-label="Password" aria-describedby="basic-addon1">
-         <button type="button"  class="signUpInfo-btn btn btn-secondary rounded-xxl text-white py-2 px-9 mb-4 fz-20">登入</button>
+         <label for="logAccountInput" class="mb-2"><h3 class="fz-20">帳號 Account/ Email Address</h3></label>
+         <input type="text" id="logAccountInput" class="form-control rounded-xl border border-secondary mb-5 py-2 px-3" placeholder="請輸入信箱" aria-label="Username" aria-describedby="basic-addon1">
+         <label for="logPasswordInput" class="mb-2"><h3 class="fz-20">密碼 Password</h3></label>
+         <input type="text" id="logPasswordInput" class="form-control rounded-xl border border-secondary mb-5 py-2 px-3" placeholder="請輸入8位數密碼，含英文數字" aria-label="Password" aria-describedby="basic-addon1">
+         <button type="button"  class="logInInfo-btn btn btn-secondary rounded-xxl text-white py-2 px-9 mb-4 fz-20">登入</button>
         </form>
         <div class="log-sign-btn-area d-flex justify-content-between">
         <button type="button" id="toSign-btn" class="toLogin-btn btn btn-white border border-primary rounded-xxl text-primary py-2 px-3 fz-16-o">沒有帳號？點此註冊</button>
@@ -188,6 +187,11 @@
     <script src="./assets/js/vendors.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=32"></script>
+    <sciprt src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></sciprt>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.15/dist/sweetalert2.all.min.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
 

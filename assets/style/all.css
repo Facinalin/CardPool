@@ -13069,6 +13069,7 @@ fieldset:disabled .btn {
 a, img {
   display: block;
   max-width: 100%;
+  text-decoration: none;
 }
 
 button {
@@ -13080,7 +13081,7 @@ button {
   position: relative;
   z-index: -4;
 }*/
-p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
+p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, ul, li {
   margin-bottom: 0;
   line-height: 1.5;
 }
@@ -13124,6 +13125,10 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
 
 .fz-8 {
   font-size: 8px;
+}
+
+.fz-14-o {
+  font-size: 14px;
 }
 
 .fz-16-o {
@@ -13225,7 +13230,7 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
 }
 
 .banner {
-  height: 730px;
+  height: 100vh;
   padding: 0 90px;
   /*position: relative;
   z-index: -3;*/
@@ -13391,6 +13396,129 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, h8, li {
 .bg5 {
   background: url(/assets/images/felix-card.jpeg);
   background-size: cover;
+}
+
+/*GSAP*/
+.scroller {
+  height: 100vh;
+}
+
+.orange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  /*設定100vh視覺效果好，避免效果一半就開始*/
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #753500;
+}
+
+.text {
+  color: #fff;
+}
+
+.black {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  /*設定100vh視覺效果好*/
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #070707;
+}
+
+.text-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 450px;
+  height: 80vh;
+}
+
+/*panel-text的parent*/
+/*text-wrap的child*/
+.panel-text {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  /*text-transform: uppercase;*/
+  font-weight: 900;
+  text-align: center;
+  background-color: #070707;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+
+.panel-text.purple-text {
+  color: #9B9BE3;
+}
+
+.panel-text.orange-text {
+  color: #E8A8D4;
+}
+
+/*色塊區*/
+/*panel 父層*/
+.p-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 450px;
+  height: 80vh;
+}
+
+/*p-wrap 子層*/
+.panel {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  /*background-image: url("../images/5ed12171d9d512cb2feead83_5.jpg");*/
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.panel._2 {
+  z-index: 1;
+  /*background-image: url("../images/5f5a5b3515c4dd0c2c455925_110642301_938622823267359_7859124022958180678_n201.jpg");*/
+}
+
+.panel.orange {
+  z-index: auto;
+  background-color: #E8A8D4;
+  background-image: none;
+}
+
+.panel.purple {
+  z-index: auto;
+  background-color: #9B9BE3;
+  background-image: none;
+}
+
+.box {
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
 
 .logo-sz {
@@ -13568,10 +13696,25 @@ label .pick:checked {
   font-weight: 600;
 }
 
+/*這是僅卡的*/
+.card-img-topCard {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 210px;
+  height: 325px;
+  border-radius: 12px;
+}
+
+.product-row-card {
+  padding: 24px;
+}
+
 .product-img {
-  background-image: url(https://i.imgur.com/n5wbL5Q.png);
-  background-repeat: no-repeat;
-  background-size: contain;
   max-width: 100%;
   height: auto;
   max-height: 520px;
@@ -13587,6 +13730,9 @@ label .pick:checked {
 }
 
 .member-img-sm {
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
   border: 6px solid #ffffff;
 }
 
@@ -13685,7 +13831,9 @@ label .pick:checked {
 }
 
 .description {
+  padding: 24px;
   white-space: pre-wrap;
+  width: 80%;
 }
 
 .red-area {
@@ -13732,6 +13880,10 @@ label .pick:checked {
   width: 50%;
 }
 
+.pic-area {
+  max-width: 70%;
+}
+
 .poster-area {
   background-repeat: no-repeat;
   background-size: contain;
@@ -13758,6 +13910,195 @@ label .pick:checked {
 
 .toLogin-btn:hover {
   border-color: #E8A8D4;
+}
+
+.step-num {
+  font-weight: 600;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #9B9BE3;
+  text-align: center;
+  padding: 6px;
+  position: relative;
+}
+
+.step-num::after {
+  content: '';
+  position: absolute;
+  width: 278px;
+  height: 1.3px;
+  background: #9B9BE3;
+  bottom: 4px;
+  left: 12px;
+  z-index: -1;
+}
+
+.navigate {
+  background: #EE6766;
+}
+
+.checkout-step {
+  padding-left: 0;
+}
+
+.pink-box {
+  margin-top: 120px;
+  margin-bottom: 48px;
+  position: relative;
+  line-height: 2;
+}
+
+.pink-box::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translate(18%, -100%);
+      -ms-transform: translate(18%, -100%);
+          transform: translate(18%, -100%);
+  background: #E8A8D4;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 15px 15px 0 0;
+  font-size: 20px;
+}
+
+.purple-box {
+  margin-top: 120px;
+  margin-bottom: 48px;
+  position: relative;
+  line-height: 2;
+}
+
+.purple-box::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translate(18%, -100%);
+      -ms-transform: translate(18%, -100%);
+          transform: translate(18%, -100%);
+  background: #9B9BE3;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 15px 15px 0 0;
+  font-size: 20px;
+}
+
+.total::before {
+  content: "本次結帳總額";
+}
+
+.total-ul {
+  width: 100%;
+}
+
+.total-item {
+  color: #EE6766;
+}
+
+.payment-detail::before {
+  content: "付款方式";
+}
+
+.invoice-detail::before {
+  content: "發票資訊";
+}
+
+.total-detail::before {
+  content: '含運統計總額';
+}
+
+.courier::before {
+  content: '勾選運送方式';
+}
+
+.ifComplement::before {
+  content: '是否二補款項';
+}
+
+.checkbox {
+  border: 1px solid #E8A8D4;
+  border-radius: 6px;
+}
+
+.shopping-cart {
+  width: 100%;
+}
+
+.shopping-cart thead {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.shopping-cart tbody {
+  text-align: center;
+}
+
+.perCartPic {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+
+.note {
+  color: #EE6766;
+  font-size: 12px;
+}
+
+.discardAllBtn {
+  background: #EE6766;
+  color: #ffffff;
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.discardAllBtn:hover {
+  color: #EE6766;
+  background: #1e1c1c;
+}
+
+.js-total {
+  color: #EE6766;
+}
+
+.address-select {
+  border: 1px solid #E8A8D4;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.address-option {
+  background: #ffffff;
+  border: 1px solid #E8A8D4;
+  border-radius: 6px;
+  padding: 2px 4px;
+}
+
+.next-step {
+  display: inline-block;
+  border: 2px solid #9B9BE3;
+  background: #9B9BE3;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.next-step:hover {
+  background: #ffffff;
+  color: #9B9BE3;
+}
+
+.seperate {
+  border-bottom: 1px solid #E8A8D4;
+}
+
+.orderId {
+  width: 100%;
+}
+
+.userNav {
+  width: 23%;
 }
 
 /*# sourceMappingURL=all.css.map */

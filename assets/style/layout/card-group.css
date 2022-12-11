@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .wrapper {
   width: 48%;
 }
@@ -128,6 +129,24 @@ label .pick:checked {
 
 .group-mem-num {
   font-weight: 600;
+}
+
+/*這是僅卡的*/
+.card-img-topCard {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 210px;
+  height: 325px;
+  border-radius: 12px;
+}
+
+.product-row-card {
+  padding: 24px;
 }
 
 /*# sourceMappingURL=card-group.css.map */

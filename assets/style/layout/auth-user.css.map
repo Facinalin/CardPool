@@ -1,0 +1,1 @@
+{"version":3,"sources":["layout/auth-user.scss","layout/auth-user.css"],"names":[],"mappings":"AAAA;EACI,UAAU;ACCd","file":"auth-user.css","sourcesContent":[".userNav{\n    width: 23%;  \n}",".userNav {\n  width: 23%;\n}\n"]}
