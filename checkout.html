@@ -35,7 +35,7 @@
                 代購
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">拆卡</a></li>
+                <li><a class="dropdown-item" href="/card-group.html">拆卡</a></li>
                 <li><a class="dropdown-item" href="#">官方周邊</a></li>
                 <li><a class="dropdown-item" href="#">代簽</a></li>
                 <li><a class="dropdown-item" href="#">打榜</a></li>
@@ -46,7 +46,7 @@
                 二手
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">換卡</a></li>
+                <li><a class="dropdown-item" href="/product-card.html">換卡</a></li>
                 <li><a class="dropdown-item" href="#">周邊</a></li>
                 <li><a class="dropdown-item" href="#">空專</a></li>
               </ul>
@@ -77,11 +77,101 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      MAXIDENT專輯一件
+                      <h5 class="cartDefault text-secondary">購物車內尚無商品～</h5>
+                      <div class="col-12 d-flex py-4 px-6">
+                        <table class="shopping-cart">
+                            <thead class="border-bottom border-primary">
+                                <!--padding寫thead/ th皆無用，寫th才有用-->
+                                <tr class="py-4">
+                                    <th width="45%" class="py-4">品項</th>
+                                    <th width="20%">單價</th>
+                                    <th width="10%" class="fz-12">數量</th>
+                                    <th width="20%">小計</th>
+                                    <th width="5%"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="perItemCart">
+                              <tr class="perItem py-4">
+                                <td>
+                                <div class="cardItem-title d-flex align-items-center py-4">
+                                    <img src="https://i.imgur.com/n5wbL5Q.png" alt="Product-img" class="perCartPicModal">
+                                    <p class="text-start pt-0 pb-3 ps-4 pe-4 fz-8">MAXIDENT專輯限定.ver(白)[含阿拉丁特典]</p>
+                                </div>
+                            </td>
+                            <td class="fz-8">NT$400</td>
+                            <td class="text-center">
+                                <ul class="d-flex flex-row justify-content-center text-center px-0 mb-0">
+                                <li class="mx-2 fz-8">4</li>
+                              </ul>
+                            </td>
+                            <td class="subtotal fz-8">NT$</td>
+                            <td class="discardBtn">
+                            <a href="#" data-id="${id}"> 
+                            <i class="fa-solid fa-trash me-2 fz-12"></i>
+                            </a>
+                            </td>
+                        </tr>
+                        <tr class="perItem py-4">
+                            <td>
+                            <div class="cardItem-title d-flex align-items-center py-4 ">
+                                <img src="https://i.imgur.com/vkq3crL.png" alt="Product-img" class="perCartPicModal">
+                                <p class="text-start pt-0 pb-3 ps-4 pe-4 fz-8">MAXIDENT專輯限定.ver(白)[含阿拉丁特典]-
+                                    二補費用
+                                   <br><span class="note fz-8"> ☞ 賣貨便or國際運費皆需二補！</span></p>
+                            </div>
+                        </td>
+                        <td class="fz-8">NT$400</td>
+                        <td class="text-center">
+                            <ul class="d-flex flex-row justify-content-center text-center px-0 mb-0">
+                            <li class="mx-2 fz-8">4</li>
+                          </ul>
+                        </td>
+                        <td class="subtotal fz-8">NT$1600</td>
+                        <td class="discardBtn">
+                        <a href="#" data-id="${id}"> 
+                        <i class="fa-solid fa-trash me-2 fz-12"></i>
+                        </a>
+                        </td>
+                    </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="py-2">
+                                        <a href="#" class="discardAllBtn" data-bs-toggle="modal" data-bs-target="#deleteModal">清空購物車</a>
+                                        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel">卡舖：等等！</h5>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  確定想要刪除購物車內所有商品？
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary text-white" data-bs-dismiss="modal">讓我返回</button>
+                                                  <button type="button" class="btn btn-primary text-white">真的要刪</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p>總金額</p>
+                                    </td>
+                                    <td>NT$<span class="js-total">計算中</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                      </div>
+
+
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">回到商品頁</button>
-                      <button type="button" class="btn btn-primary">結帳</button>
+                      <button type="button" class="btn btn-secondary text-white" data-bs-dismiss="modal">回到商品頁</button>
+                      <a href="/checkout.html" type="button" class="btn btn-primary text-white"><i class="fa-solid fa-dollar-sign text-white me-2"></i>結帳</a>
                     </div>
                   </div>
                 </div>
@@ -121,35 +211,11 @@
             </tr>
         </thead>
         <tbody class="perItemCart">
-            <tr class="perItem py-4">
-                <td>
-                <div class="cardItem-title d-flex align-items-center py-4">
-                    <img src="https://i.imgur.com/n5wbL5Q.png" alt="Product-img" class="perCartPic">
-                    <p class="text-start pt-0 pb-3 ps-4 pe-4">MAXIDENT專輯限定.ver(白)[含阿拉丁特典]</p>
-                </div>
-            </td>
-            <td>NT$400</td>
-            <td class="text-center">
-                <ul class="d-flex flex-row justify-content-center text-center px-0 mb-0">
-                <button><i class="fa-solid fa-minus text-primary"></i></button>
-                <li class="mx-2">4</li>
-                <button><i class="fa-solid fa-plus text-primary"></i></button>
-              </ul>
-            </td>
-            <td class="subtotal">NT$</td>
-            <td class="discardBtn">
-            <a href="#" data-id="${id}"> 
-            <i class="fa-solid fa-trash me-2"></i>
-            </a>
-            </td>
-        </tr>
-        <tr class="perItem py-4">
+          <tr class="perItem py-4">
             <td>
-            <div class="cardItem-title d-flex align-items-center py-4 ">
-                <img src="https://i.imgur.com/vkq3crL.png" alt="Product-img" class="perCartPic">
-                <p class="text-start pt-0 pb-3 ps-4 pe-4">MAXIDENT專輯限定.ver(白)[含阿拉丁特典]-
-                    二補費用
-                   <br><span class="note"> ☞ 賣貨便or國際運費皆需二補！</span></p>
+            <div class="cardItem-title d-flex align-items-center py-4">
+                <img src="https://i.imgur.com/n5wbL5Q.png" alt="Product-img" class="perCartPic">
+                <p class="text-start pt-0 pb-3 ps-4 pe-4">MAXIDENT專輯限定.ver(白)[含阿拉丁特典]</p>
             </div>
         </td>
         <td>NT$400</td>
@@ -160,13 +226,37 @@
             <button><i class="fa-solid fa-plus text-primary"></i></button>
           </ul>
         </td>
-        <td class="subtotal">NT$1600</td>
+        <td class="subtotal">NT$</td>
         <td class="discardBtn">
         <a href="#" data-id="${id}"> 
         <i class="fa-solid fa-trash me-2"></i>
         </a>
         </td>
     </tr>
+    <tr class="perItem py-4">
+        <td>
+        <div class="cardItem-title d-flex align-items-center py-4 ">
+            <img src="https://i.imgur.com/vkq3crL.png" alt="Product-img" class="perCartPic">
+            <p class="text-start pt-0 pb-3 ps-4 pe-4">MAXIDENT專輯限定.ver(白)[含阿拉丁特典]-
+                二補費用
+               <br><span class="note"> ☞ 賣貨便or國際運費皆需二補！</span></p>
+        </div>
+    </td>
+    <td>NT$400</td>
+    <td class="text-center">
+        <ul class="d-flex flex-row justify-content-center text-center px-0 mb-0">
+        <button><i class="fa-solid fa-minus text-primary"></i></button>
+        <li class="mx-2">4</li>
+        <button><i class="fa-solid fa-plus text-primary"></i></button>
+      </ul>
+    </td>
+    <td class="subtotal">NT$1600</td>
+    <td class="discardBtn">
+    <a href="#" data-id="${id}"> 
+    <i class="fa-solid fa-trash me-2"></i>
+    </a>
+    </td>
+</tr>
         </tbody>
         <tfoot>
             <tr>
@@ -346,52 +436,7 @@
             </tr>
         </thead>
         <tbody class="perItemCart">
-            <tr class="perItem py-4">
-                <td>
-                <div class="cardItem-title d-flex align-items-center py-4">
-                    <img src="https://i.imgur.com/n5wbL5Q.png" alt="Product-img" class="perCartPic">
-                    <p class="text-start pt-0 pb-3 ps-4 pe-4">MAXIDENT專輯限定.ver(白)[含阿拉丁特典]</p>
-                </div>
-            </td>
-            <td>NT$400</td>
-            <td class="text-center">
-                <ul class="d-flex flex-row justify-content-center text-center px-0 mb-0">
-                <button><i class="fa-solid fa-minus text-primary"></i></button>
-                <li class="mx-2">4</li>
-                <button><i class="fa-solid fa-plus text-primary"></i></button>
-              </ul>
-            </td>
-            <td class="subtotal">NT$</td>
-            <td class="discardBtn">
-            <a href="#" data-id="${id}"> 
-            待出貨
-            </a>
-            </td>
-        </tr>
-        <tr class="perItem py-4">
-            <td>
-            <div class="cardItem-title d-flex align-items-center py-4 ">
-                <img src="https://i.imgur.com/vkq3crL.png" alt="Product-img" class="perCartPic">
-                <p class="text-start pt-0 pb-3 ps-4 pe-4">MAXIDENT專輯限定.ver(白)[含阿拉丁特典]-
-                    二補費用
-                   <br><span class="note"> ☞ 賣貨便or國際運費皆需二補！</span></p>
-            </div>
-        </td>
-        <td>NT$400</td>
-        <td class="text-center">
-            <ul class="d-flex flex-row justify-content-center text-center px-0 mb-0">
-            <button><i class="fa-solid fa-minus text-primary"></i></button>
-            <li class="mx-2">4</li>
-            <button><i class="fa-solid fa-plus text-primary"></i></button>
-          </ul>
-        </td>
-        <td class="subtotal">NT$1600</td>
-        <td class="discardBtn">
-        <a href="#" data-id="${id}"> 
-        待出貨
-        </a>
-        </td>
-    </tr>
+          
         </tbody>
         <tfoot>
         </tfoot>

@@ -339,6 +339,7 @@ function logOut() {
 var api_Pro_Url = 'http://localhost:3003/products';
 var productData = [];
 getProduct("".concat(api_Pro_Url)); //`${api_Pro_Url}`
+//api取產品資料-here
 
 function getProduct(url) {
   axios.get(url).then(function (response) {
@@ -347,8 +348,13 @@ function getProduct(url) {
     var filterGroup = productData.filter(function (el) {
       return el.type === '拆卡';
     });
+    var filterCard = productData.filter(function (el) {
+      return el.type === '出卡';
+    });
+    console.log(productData);
+    console.log(checkChannel(productData));
     renderProduct(filterGroup);
-    findGroupEvent(filterGroup); //filterChannel(filterGroup);
+    renderCardProduct(filterCard);
   })["catch"](function (error) {
     console.log(error);
   });
@@ -386,38 +392,37 @@ function renderProduct(data) {
 
     productList.innerHTML = str;
   });
-} //這個版型僅for換卡
+}
 
+var cardList = document.querySelector('.product-row-card'); //這個版型僅for換卡
 
 function renderCardProduct(data) {
-  var str = "";
-  var obj = {};
+  var cardStr = "";
+  var obj = {
+    1: "Bangchan",
+    2: "Leeknow",
+    3: "Changbin",
+    4: "Hyunjin",
+    5: "Han",
+    6: "Felix",
+    7: "Seungmin",
+    8: "I.N"
+  };
   data.forEach(function (item) {
     var id = item.id,
         title = item.title,
         imgUrl = item.imgUrl,
-        channel = item.channel,
         price = item.price,
-        leftmember = item.leftmember;
+        member = item.member;
 
-    if (data.length > 0 && productList) {
-      //obj為計算每一個item裡的leftmember中true跟false數量的物件
-      obj = Object.values(leftmember).reduce(function (a, b) {
-        if (a[b]) {
-          a[b]++;
-        } else {
-          a[b] = 1;
-        }
-
-        return a;
-      }, {}); //下方組html字串
-
-      str += "<div class=\"card col-lg-3 col-md-4 col-sm-6 px-2 border border-0 mb-5\">\n   <div class=\"card-head d-flex justify-content-center\">\n   <a href=\"/product.html?id=".concat(id, "\" class=\"card-img-topa\"><img src=\"").concat(imgUrl, "\" class=\"card-img-top\" alt=\"...\"></a>\n </div>\n   <div class=\"card-body px-4\">\n     <p class=\"card-title fz-20-w\">").concat(title, "</p>\n       <h6 class=\"channel text-primary mb-2\">").concat(channel, "</h6>\n       <h6 class=\"price text-secondary\">$<span>").concat(price, "</span></h6>\n     <p class=\"card-text mt-7\">\u5DEE<span class=\"group-mem-num text-orange\">").concat(obj['true'], "</span>\u4F4D\u6210\u5718</p>\n   </div>\n </div>");
+    if (data.length > 0 && cardList) {
+      //下方組html字串
+      cardStr += "<div class=\"cardList col-lg-3 col-md-4 col-sm-6 px-2 border border-0 mb-5\">\n     <div class=\"card-head d-flex justify-content-center\">\n   <a href=\"/product.html?id=".concat(id, "\" class=\"card-img-topCarda\"><img src=\"").concat(imgUrl, "\" class=\"card-img-topCard\" alt=\"...\"></a>\n </div>\n   <div class=\"card-body px-9\">\n     <p class=\"card-title fz-20-w\">").concat(title, "</p>\n       <h6 class=\"channel text-primary mb-2\">").concat(obj[member], "</h6>\n       <h6 class=\"price text-secondary\">$<span>").concat(price, "</span></h6>\n   </div></div>");
     } else {
       return "";
     }
 
-    productList.innerHTML = str;
+    cardList.innerHTML = cardStr;
   });
 } //產品渲染區-end
 //card-group 找幾團按鈕
@@ -428,6 +433,7 @@ var findGroupBtn = document.querySelector('#findGroupBtn');
 function findGroupEvent(data) {
   if (findGroupBtn) {
     findGroupBtn.addEventListener('click', function (e) {
+      console.log();
       var arr = []; //active的id們的陣列
 
       var memId; //active的id
@@ -441,13 +447,12 @@ function findGroupEvent(data) {
         }
       }); //取畫面上的成員id
 
-      console.log("here's");
       console.log(arr); //到這邊沒錯
 
-      console.log();
       data.forEach(function (item) {
         var leftmember = item.leftmember,
-            id = item.id; //只要符合其中一位成員就先丟到陣列裡
+            id = item.id,
+            channel = item.channel; //只要符合其中一位成員就先丟到陣列裡
 
         arr.forEach(function (el) {
           if (leftmember[el] === true) {
@@ -474,7 +479,7 @@ function findGroupEvent(data) {
           filtId.push(item[0]);
         }
       });
-      console.log("\u7522\u54C1id".concat(filtId)); //這是篩選出來可渲染的產品id
+      console.log(filtId); //這是篩選出來可渲染的產品id
       //組json的url字串
 
       var api_Pro_Id_Url = "".concat(api_Pro_Url, "?id=");
@@ -500,28 +505,21 @@ function findGroupEvent(data) {
       console.log(filt_API_Url); //實際上要axios.get的json url
     });
   }
-} //篩選通路功能
+} //篩選通路功能 -here
 
 
 var productChannels = document.querySelector('.productChannels');
 
-function filterChannel(data) {
+function checkChannel(data) {
+  var channelVal;
+
   if (productChannels) {
     productChannels.addEventListener('change', function (e) {
-      var channelVal = e.target.value;
-
-      if (channelVal === '所有通路') {
-        renderProduct(data);
-        return;
-      }
-
-      var targetChannel = [];
-      data.forEach(function (el) {
-        if (channelVal === el.channel) {
-          targetChannel.push(el);
-        }
+      channelVal = e.target.value;
+      console.log(channelVal);
+      return channelVal === "所有通路" ? data : data.filter(function (el) {
+        return el.channel === channelVal;
       });
-      renderProduct(targetChannel);
     });
   }
 } //api_Pro_Id_Url.substring(0,api_Pro_Id_Url.length-4)
@@ -560,7 +558,7 @@ function toLastStepPage() {
     });
   }
 } //結帳頁面-end
-//商品頁面：確認卡位-start
+//商品頁面：確認卡位-start-TBC
 
 
 var confirmJoinBtn = document.querySelector('#confirmJoinBtn');
@@ -589,7 +587,6 @@ function getPerProduct() {
   if (productId) {
     axios.get("".concat(api_Pro_Url, "/").concat(productId)).then(function (response) {
       perObj = response.data;
-      console.log('here');
       console.log(perObj.sellerId);
       sellerId = perObj.sellerId;
       getPerSeller(sellerId);
@@ -607,8 +604,7 @@ var sellerLeft = document.querySelector('.seller-left');
 var internationalFeeArea = document.querySelector('.internationalFee');
 var domesticCourierList = document.querySelector('.domesticCourier');
 var fullDescriptionArea = document.querySelector('.description');
-var picArea = document.querySelector('.pic-area');
-console.log(fullDescriptionArea); //因為賣家資訊與商品資訊取的資料集不同，故拉出來渲染
+var picArea = document.querySelector('.pic-area'); //因為賣家資訊與商品資訊取的資料集不同，故拉出來渲染
 
 function getPerSeller(sellerId) {
   var sellerData = {};
