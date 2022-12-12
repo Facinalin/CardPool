@@ -353,15 +353,18 @@ getProduct(`${api_Pro_Url}`)
 
 //`${api_Pro_Url}`
 
+//api取產品資料-here
 function getProduct(url){
   axios.get(url)
   .then(function(response){
     console.log(response.data);
     productData = response.data;
     const filterGroup = productData.filter(el => {return el.type ==='拆卡'})
+    const filterCard = productData.filter(el => {return el.type ==='出卡'})
+    console.log(productData);
+    console.log(checkChannel(productData));
     renderProduct(filterGroup);
-    findGroupEvent(filterGroup);
-    //filterChannel(filterGroup);
+    renderCardProduct(filterCard);
   })
   .catch(function(error){
     console.log(error);
@@ -401,35 +404,29 @@ productList.innerHTML = str;
    })
 }
 
+const cardList = document.querySelector('.product-row-card');
 
 //這個版型僅for換卡
 function renderCardProduct(data){
-  let str = "";
-  let obj= {};
+  let cardStr = "";
+  let obj= {1:"Bangchan", 2:"Leeknow", 3:"Changbin", 4:"Hyunjin", 5:"Han", 6:"Felix", 7:"Seungmin", 8:"I.N"};
   data.forEach(item =>{
-   const {id, title, imgUrl, channel, price, leftmember} = item;
-   if(data.length>0 && productList){
-     //obj為計算每一個item裡的leftmember中true跟false數量的物件
-   obj = Object.values(leftmember).reduce((a,b) => {
-     if(a[b]){a[b]++;}
-     else{a[b]=1}
-     return a},{});
+   const {id, title, imgUrl, price, member} = item;
+   if(data.length>0 && cardList){
      //下方組html字串
-   str += `<div class="card col-lg-3 col-md-4 col-sm-6 px-2 border border-0 mb-5">
-   <div class="card-head d-flex justify-content-center">
-   <a href="/product.html?id=${id}" class="card-img-topa"><img src="${imgUrl}" class="card-img-top" alt="..."></a>
+     cardStr += `<div class="cardList col-lg-3 col-md-4 col-sm-6 px-2 border border-0 mb-5">
+     <div class="card-head d-flex justify-content-center">
+   <a href="/product.html?id=${id}" class="card-img-topCarda"><img src="${imgUrl}" class="card-img-topCard" alt="..."></a>
  </div>
-   <div class="card-body px-4">
+   <div class="card-body px-9">
      <p class="card-title fz-20-w">${title}</p>
-       <h6 class="channel text-primary mb-2">${channel}</h6>
+       <h6 class="channel text-primary mb-2">${obj[member]}</h6>
        <h6 class="price text-secondary">$<span>${price}</span></h6>
-     <p class="card-text mt-7">差<span class="group-mem-num text-orange">${obj['true']}</span>位成團</p>
-   </div>
- </div>`;
+   </div></div>`;
 }else{
  return "";
 }
-productList.innerHTML = str;
+cardList.innerHTML = cardStr;
   })
 }
 
@@ -438,12 +435,10 @@ productList.innerHTML = str;
 //card-group 找幾團按鈕
 const findGroupBtn = document.querySelector('#findGroupBtn');
 
-
-
-
 function findGroupEvent(data){
   if(findGroupBtn){
 findGroupBtn.addEventListener('click', (e) =>{
+  console.log()
   let arr = []; //active的id們的陣列
   let memId; //active的id
   let testArr = []; //篩選出空位的成員：第一次聯集
@@ -453,11 +448,10 @@ memberImgAll.forEach(el =>{
       arr.push(memId);
     }
   })//取畫面上的成員id
-  console.log("here's");
+ 
     console.log(arr); //到這邊沒錯
-    console.log();
     data.forEach(item =>{
-      const {leftmember, id} = item;
+      const {leftmember, id, channel} = item;
       //只要符合其中一位成員就先丟到陣列裡
       arr.forEach(el =>{
       if(leftmember[el] === true){
@@ -483,7 +477,8 @@ memberImgAll.forEach(el =>{
         filtId.push(item[0]);
       }
     })
-    console.log(`產品id${filtId}`); //這是篩選出來可渲染的產品id
+    console.log(filtId); //這是篩選出來可渲染的產品id
+
     //組json的url字串
     let api_Pro_Id_Url = `${api_Pro_Url}?id=`;
     let filt_API_Url = "";
@@ -510,29 +505,21 @@ memberImgAll.forEach(el =>{
 }
 }
 
-//篩選通路功能
+//篩選通路功能 -here
 
 const productChannels = document.querySelector('.productChannels');
 
-
-function filterChannel(data){
+function checkChannel(data){
+  let channelVal;
   if(productChannels){
     productChannels.addEventListener('change', (e) =>{
-      let channelVal = e.target.value;
-      if(channelVal==='所有通路'){
-      renderProduct(data);
-      return;
-      }
-      let targetChannel = [];
-      data.forEach(el =>{
-        if( channelVal=== el.channel ){
-        targetChannel.push(el);
-      }
-      })
-      renderProduct(targetChannel);
+    channelVal = e.target.value;
+    console.log(channelVal);
+    return channelVal === "所有通路" ? data : data.filter(el => { return el.channel === channelVal });
     })
   }
 }
+
 
 
 //api_Pro_Id_Url.substring(0,api_Pro_Id_Url.length-4)
@@ -542,7 +529,6 @@ function filterChannel(data){
 
 //可以用sort因為陣列長度<10，sort會使用Insertion Sort，不會有10以上Quick Sort的不穩定現象。
 //比較兩個陣列是否相等：JSON.stringify(a)===JSON.stringify(b);或是while迴圈
-
 
 //結帳頁面-start
 const toSecondStep = document.querySelector('#toSecondStep');
@@ -576,7 +562,7 @@ toThirdStep.addEventListener('click', e =>{
 
 //結帳頁面-end
 
-//商品頁面：確認卡位-start
+//商品頁面：確認卡位-start-TBC
 const confirmJoinBtn = document.querySelector('#confirmJoinBtn');
 const JoinNum = document.querySelector('#confirmJoinBtn span');
 
@@ -605,7 +591,6 @@ const productId = location.href.split("=")[1]; //這個可以放函式內不然�
    axios.get(`${api_Pro_Url}/${productId}`)
    .then(function(response){
     perObj = response.data;
-    console.log('here');
     console.log(perObj.sellerId);
     sellerId = perObj.sellerId;
     getPerSeller(sellerId);
@@ -627,8 +612,6 @@ const domesticCourierList = document.querySelector('.domesticCourier');
 const fullDescriptionArea = document.querySelector('.description');
 const picArea = document.querySelector('.pic-area');
 
-
-console.log(fullDescriptionArea);
 //因為賣家資訊與商品資訊取的資料集不同，故拉出來渲染
 function getPerSeller(sellerId){
   let sellerData = {};
@@ -835,6 +818,6 @@ function renderPerProduct(data){
 
 //欠：個別賣家賣場/ 
 
-// 
+//
 
 
