@@ -1,6 +1,6 @@
-# 網頁切版直播班 Gulp 範例 - 加入 Bootstrap 版本
+# Gulp Project (with Bootstrap)
 
-> 使用該專案 Gulp 時，就可以不用使用其他編譯工具編譯 SCSS 或是 JavaScript 囉。
+> 使用該專案 Gulp 時，就可以不用使用其他編譯工具編譯 SCSS 或是 JavaScript。
 
 ## 指令列表
 
